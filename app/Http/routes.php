@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('hotel', function () {
+    return view('mantenimientos.hoteles');
+});
+Route::get('perfil', function () {
+    return view('proveedores.content');
+});
+Route::get('traslados', function () {
+    return view('proveedores.traslados');
+});
+Route::get('TrasladosAdmin', function () {
+    return view('administrador.TrasladosPendientes');
+});
