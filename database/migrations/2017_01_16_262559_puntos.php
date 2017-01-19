@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Rutas extends Migration
+class Puntos extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,17 @@ class Rutas extends Migration
      */
     public function up()
     {
-        Schema::create('rutas',function(Blueprint $table)
+        Schema::create('puntos',function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('cod_ruta')->unique();
+            $table->string('cod_punto')->unique();
             $table->string('nombre');
+            $table->integer('id_ruta')->unsigned();
 
-
+            $table->foreign('id_ruta')->references('id')->on('rutas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
+        //
     }
 
     /**
@@ -30,6 +32,9 @@ class Rutas extends Migration
      */
     public function down()
     {
-        Schema::drop('rutas');
+        Schema::drop('puntos');
     }
 }
+
+
+

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Hoteles extends Migration
+class Tickets extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,12 @@ class Hoteles extends Migration
      */
     public function up()
     {
-        Schema::create('hoteles',function(Blueprint $table)
+        Schema::create('tickets',function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('cod_hotel')->unique();
-            $table->string('nombre');
-            $table->string('direccion');
-            $table->string('telefono');
-            $table->string('email');
-
+            $table->string('cod_ticket')->unique();
+            $table->string('codigoQR');
+            $table->string('precioUnitario');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class Hoteles extends Migration
      */
     public function down()
     {
-        Schema::drop('hoteles');
+        Schema::drop('tickets');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Rutas extends Migration
+class Reservas extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class Rutas extends Migration
      */
     public function up()
     {
-        Schema::create('rutas',function(Blueprint $table)
+        Schema::create('reservas',function(Blueprint $table)
         {
             $table->increments('id');
-            $table->string('cod_ruta')->unique();
-            $table->string('nombre');
-
+            $table->string('cod_reserva')->unique();
+            $table->string('fechaReserva');
+            $table->string('precioTotalGeneral');
 
             $table->timestamps();
         });
@@ -30,6 +30,6 @@ class Rutas extends Migration
      */
     public function down()
     {
-        Schema::drop('rutas');
+        Schema::drop('reservas');
     }
 }
