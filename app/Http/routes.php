@@ -26,3 +26,18 @@ Route::get('traslados', function () {
 Route::get('TrasladosAdmin', function () {
     return view('administrador.TrasladosPendientes');
 });
+Route::get('hotelesA', function () {
+    return view('administrador.hoteles');
+});
+Route::get('ProveedorA', function () {
+    return view('administrador.proveedores');
+});
+Route::get('AeropuertoA', function () {
+    return view('administrador.Aeropuerto');
+});
+Route::get('Rutas', function () {
+    return view('administrador.rutas');
+});
+Route::get('reserva', function () {
+    return view('reservas.reserva');
+});

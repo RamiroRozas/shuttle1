@@ -1,3 +1,14 @@
- .affix {
-      top: 100px;
-  }
+ .affix{top:100px;}
+ .ContentMantenimiento{background: #ecf0f5;}
+ .box {position: relative;border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.table-hover>tbody>tr:hover{ background:rgba(68,157,68,0.1);}
+.paginacion{padding: 0 15px;}
+/*sibdebar*/
+.sidebarA{background:#222D32;color: #b8c7ce;height: 100%;}
+.sidebarA a{color: #b8c7ce;}
