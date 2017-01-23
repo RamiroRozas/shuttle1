@@ -26,9 +26,7 @@ class Pasajeros extends Migration
             $table->string('fechaNacimiento');
             $table->string('telefono');
             $table->string('email');
-            $table->integer('id_pasajero')->unsigned();
 
-            $table->foreign('id_pasajero')->references('id')->on('reservas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -16,8 +16,9 @@ class Reservas extends Migration
         {
             $table->increments('id');
             $table->string('cod_reserva')->unique();
-            $table->string('fechaReserva');
+            $table->datetime('fechaReserva');
             $table->string('precioTotalGeneral');
+            $table->string('id_representante');
 
             $table->timestamps();
         });

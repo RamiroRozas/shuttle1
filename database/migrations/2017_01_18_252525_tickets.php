@@ -18,6 +18,13 @@ class Tickets extends Migration
             $table->string('cod_ticket')->unique();
             $table->string('codigoQR');
             $table->string('precioUnitario');
+
+            $table->integer('detalleReserva')->unsigned();
+            $table->integer('id_pasajero')->unsigned();
+
+
+            $table->foreign('detalleReserva')->references('id')->on('detalleReservas')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_pasajero')->references('id')->on('pasajeros')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

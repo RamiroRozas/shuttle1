@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="box">
-      <table class="table table-bordered table-hover">
+      <table id="tablaHoteles" class="table table-bordered table-hover">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -50,37 +50,11 @@
             <th>Dirección</th>
             <th>Telefono</th>
             <th>E-mail</th>
-            <th>Actulizacion</th>
+            <th>Actualizacion</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Hostal Inka's guest house</td>
-            <td>Inka express</td>
-            <td>10457484947</td>
-            <td>Calle San Agustin 249</td>
-            <td>084 23543</td>
-            <td>info@inkaguesthouse.com</td>
-            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg">Modificar</button></td>
-          </tr>
-          <tr>
-            <td>Hostal Inka's guest house</td>
-            <td>Inka express</td>
-            <td>10457484947</td>
-            <td>Calle San Agustin 249</td>
-            <td>084 23543</td>
-            <td>info@inkaguesthouse.com</td>
-            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg">Modificar</button></td>
-          </tr>
-          <tr>
-            <td>Hostal Inka's guest house</td>
-            <td>Inka express</td>
-            <td>10457484947</td>
-            <td>Calle San Agustin 249</td>
-            <td>084 23543</td>
-            <td>info@inkaguesthouse.com</td>
-            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg">Modificar</button></td>
-          </tr>
+          
         </tbody>
      </table>
      <!-- paginacion -->
@@ -164,3 +138,9 @@
 </div>
 </div>
 @endsection
+
+ @section('scripts')  
+
+<script src="{{URL::asset('assets/js/hoteles.js')}}"></script>
+
+ @stop

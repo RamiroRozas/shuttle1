@@ -18,9 +18,9 @@ class Aeropuertos extends Migration
             $table->string('cod_aeropuerto')->unique();
             $table->string('nombre');
             $table->string('direccion');
-            $table->integer('id_punto')->unsigned();
-            
-            $table->foreign('id_punto')->references('id')->on('puntos')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_ciudad')->unsigned();
+
+            $table->foreign('id_ciudad')->references('id')->on('ciudades')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -17,12 +17,15 @@ class Hoteles extends Migration
             $table->increments('id');
             $table->string('cod_hotel')->unique();
             $table->string('nombre');
+            $table->string('razonSocial');
+            $table->string('ruc');
             $table->string('direccion');
             $table->string('telefono');
             $table->string('email');
-            $table->integer('id_punto')->unsigned();
+            $table->string('tipo');
+            $table->integer('id_ciudad')->unsigned();
 
-            $table->foreign('id_punto')->references('id')->on('puntos')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('id_ciudad')->references('id')->on('ciudades')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -20,9 +20,6 @@ class Proveedores extends Migration
             $table->string('telefono');
             $table->string('responsable');
             $table->string('direccion');
-            $table->integer('id_detalleReserva')->unsigned();
-
-            $table->foreign('id_detalleReserva')->references('id')->on('detalleReservas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

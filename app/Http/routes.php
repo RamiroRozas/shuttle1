@@ -26,9 +26,12 @@ Route::get('traslados', function () {
 Route::get('TrasladosAdmin', function () {
     return view('administrador.TrasladosPendientes');
 });
-Route::get('hotelesA', function () {
+/*Route::get('hotelesA', function () {
     return view('administrador.hoteles');
-});
+});*/
+
+Route::resource('hotelesA','HotelesController');
+
 Route::get('ProveedorA', function () {
     return view('administrador.proveedores');
 });
